@@ -1,8 +1,9 @@
 <?php
 
 include_once("../database/database.php");
-use Dao\RegisterDao;
-use Model\RegisterModel;
+include_once("../DAO/registerDao.php");
+//use MyDao\RegisterDao;
+//use Model\RegisterModel;
 
 $userRegister = new RegisterDao($conn);
 
@@ -19,6 +20,4 @@ $modelRegister->setPassword($password);
 
 $userRegister->create($modelRegister);
 
-header("Location: index.php");
-
-echo "<h1>POST</h1>";
+header("Location: ../../index.php");

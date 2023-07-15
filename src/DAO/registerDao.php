@@ -1,9 +1,12 @@
 <?php
-namespace Dao;
-use \Model\RegisterModel;
-use \Model\RegisterInterface;
+include_once("../model/registerModel.php");
+/* namespace MyDao;
 
-class RegisterDao implements RegisterInterface {
+use \Model\RegisterModel;
+use \Model\RegisterInterface; */
+
+class RegisterDao implements RegisterInterface
+{
 
     private $conn;
 
@@ -12,8 +15,9 @@ class RegisterDao implements RegisterInterface {
         $this->conn = $conn;
     }
 
-    public function create(RegisterModel $registerModel){
-        $stmt = $this->conn->prepare("INSERT INTO `cadastros`(`nome`, `cpf`, `email`, `senha`) VALUES (':nome',':cpf',':email',':senha')");
+    public function create(RegisterModel $registerModel)
+    {
+        $stmt = $this->conn->prepare("INSERT INTO cadastros (nome, cpf, email, senha) VALUES (:nome, :cpf, :email, :senha)");
 
         $stmt->bindParam(":nome", $registerModel->getName());
         $stmt->bindParam(":cpf", $registerModel->getCpf());
