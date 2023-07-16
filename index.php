@@ -9,7 +9,7 @@
 
 <body>
   <main class="bg-slate-300 h-screen p-10 flex items-center justify-center">
-    <form action="src\auth\registerAuth.php" method="post" class="w-80 text-xl">
+    <form action="src\auth\registerAuth.php" method="post" class="w-96 text-xl">
       <fieldset class="p-7 border-4 border-red-300">
         <legend class="px-3 border-4 border-red-300 ">Register</legend>
         <!-- Name -->

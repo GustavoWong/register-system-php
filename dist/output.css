@@ -584,6 +584,10 @@ video {
   width: 20rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .items-center {
   align-items: center;
 }

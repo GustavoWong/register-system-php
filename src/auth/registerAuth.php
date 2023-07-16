@@ -10,7 +10,7 @@ $userRegister = new RegisterDao($conn);
 $name = $_POST['full-name'];
 $cpf = $_POST['full-cpf'];
 $email = $_POST['full-email'];
-$password = $_POST['full-password'];
+$password = password_hash($_POST['full-password'], PASSWORD_DEFAULT);
 
 $modelRegister = new RegisterModel();
 $modelRegister->setName($name);
